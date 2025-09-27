@@ -58,8 +58,8 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
 
-        /* IRQ: P0.02 (MOTION) */
-        irq-gpios = <&gpio0 2 GPIO_ACTIVE_LOW | GPIO_PULL_UP>;
+        /* IRQ: P0.02 (MOTION) — この dtc では括弧必須 */
+        irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
         cpi = <600>;
         /* swap-xy; */
