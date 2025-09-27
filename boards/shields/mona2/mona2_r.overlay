@@ -58,8 +58,8 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
 
-        /* IRQ: P0.02 (MOTION) — フラグは最小形で確実に通す */
-        irq-gpios = <&gpio0 2 GPIO_ACTIVE_LOW>;
+        /* IRQ: P0.02 (MOTION) — 確実に通るよう flags は 0 に */
+        irq-gpios = <&gpio0 2 0>;
 
         cpi = <600>;
         /* swap-xy; */
